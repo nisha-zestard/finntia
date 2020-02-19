@@ -1,0 +1,138 @@
+.contact-form-bottom{
+    padding: 250px 0 170px;
+    .left-content{
+        h5{
+            @include small-title(100px);
+            margin-bottom: 60px;
+        }
+        h2{
+            @include large-title();
+            padding-right: 140px;
+            margin-bottom: 60px;
+        }
+        p{
+            font-size: 21px;
+            line-height: 30px;
+            padding-right: 100px;
+            margin-bottom: 60px;
+        }
+    }
+    .contact-form{
+        .frm_forms{
+            form{
+                .frm_form_fields{
+                    fieldset{
+                        .frm_fields_container{
+                            .form-field{
+                                width: 100%;
+                                margin-left: 0;
+                                margin-bottom: 15px;
+                                input[type=text], input[type=email], textarea{
+                                    height: 90px;
+                                    background-color: $bg-light;
+                                    padding-left: 35px;
+                                    border-radius: 0;
+                                    border: 0;
+                                    box-shadow: none;
+                                    font-size: 21px;
+                                    color: $text-dark;
+                                    font-family: $primary-font;
+                                    &::-webkit-input-placeholder { /* Edge */
+                                        color: $text-dark;
+                                      }
+                                      
+                                      &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+                                        color: $text-dark;
+                                      }
+                                      
+                                      &::placeholder {
+                                        color: $text-dark;
+                                      }
+                                }
+                                textarea{
+                                    height: 220px;
+                                    padding: 32px 35px;
+                                }
+                            }
+                            .frm_submit{
+                                .frm_button_submit{
+                                    @include theme-btn($font-size: 17px, $font-family: $secondary-font, $padding: 22px 26px);
+                                    margin: 0;
+                                }
+                            }
+                        }
+                    }
+                }    
+            }
+        }
+    }
+}
+.footer-main {
+    background-color: $primary-color;
+    padding: 95px 0 65px;
+    color: $white-color;
+    .footer-top {
+        margin-bottom: 120px;
+        h2{
+            font-size: 36px;
+        }
+    }
+    .footer-middle {
+        margin-bottom: 45px;
+        .footer-middle-inner {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.20);
+            padding-bottom: 60px; 
+            .footer-menu {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0px;
+                padding: 0px;
+                list-style: none;
+                justify-content: space-around; 
+                li {
+                    display: inline-block;
+                    a {
+                        color: $white-color;
+                        text-decoration: none;
+                        font-weight: 700;
+                        font-size: 24px;
+                    }
+                }
+            }
+            .social-icon {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0px;
+                padding: 0px;
+                list-style: none;
+                justify-content: flex-end;
+                li {
+                    a {
+                        font-family: $secondary-font;
+                        color: $white-color;
+                        text-decoration: none;
+                        font-weight: 900;
+                        margin-right: 10px;
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+    }
+    .footer-bottom {
+        .copy-right {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.19);
+            font-weight: 600;
+            font-family: $secondary-font;
+            font-size: 24px;
+            margin: 0;
+            a {
+                color: rgba(255, 255, 255, 0.19);
+                font-weight: 600;
+                padding-left: 30px;
+                font-size: 24px;
+            }
+        }
+    }
+}
