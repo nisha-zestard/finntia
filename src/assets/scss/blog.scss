@@ -1,0 +1,198 @@
+.blog-post{
+    .blog-list{
+        .blog-wrap{
+            margin-bottom: 68px;
+            &.odd {
+                .image-content {
+                    position: relative;
+                    margin-bottom: 30px;
+                    img{
+                        width: 100%;
+                    }
+                    .content {
+                        position: absolute;
+                        bottom: 15px; 
+                        background-color: white;
+                        width: calc(100% - 30px);
+                        left: 15px;
+                        padding: 35px;
+                        h5 {
+                           @include small-title(65px);
+                           margin-bottom: 15px;
+                        }
+                        h2 {
+                           font-size: 34px;
+                        }
+                        p{
+                            margin: 0;
+                        }
+                    }
+                }
+                .bottom-social-icon {
+                    padding-left: 110px;
+                    p {
+                        font-size: 21px;
+                        line-height: 30px;
+                    }
+                    div{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        ul {
+                            display: flex;
+                            flex-wrap: wrap;
+                            list-style: none;
+                            padding: 0;
+                            margin: 0;
+                            justify-content: flex-end;
+                            li {
+                                p {
+                                    font-size: 16px;
+                                    margin-right: 20px;
+                                    margin-bottom: 0;
+                                    line-height: 20px;
+                                }
+                                a {
+                                    font-family: $secondary-font;
+                                    color: $text-dark;
+                                    text-decoration: none;
+                                    font-weight: 700;
+                                    margin-right: 10px;
+                                }
+                            }
+                        }
+                        a{
+                            color: $text-dark;
+                            i{
+                                &:before{
+                                    font-size: 24px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.even{
+                .image-content{
+                    position: relative;
+                    img{
+                        width: 100%;
+                    }
+                    .content{
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                        text-align: center;
+                        width: 100%;
+                        text-align: center;
+                        padding: 0 140px;
+                        h2{
+                            font-size: 34px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .blog-sidebar{
+        .title{
+            margin-bottom: 25px;
+            h5{
+                @include small-title(50px);
+            }
+        }
+        .latest-post{
+            margin: 70px 0;
+            ul.latest-post{
+                margin: 0;
+                li{
+                    display: flex;
+                    padding-bottom: 10px;
+                    margin-bottom: 10px;
+                    border-bottom: 1px dotted $text-dark;
+                    flex-wrap: wrap;
+                    &:last-child{
+                        border-bottom: 0;
+                    }
+                    .image{
+                        width: 95px;
+                        img{
+                            max-width: 70px;
+                            height: 70px;
+                            border-radius: 50%;
+                        }
+                    }
+                    .desc{
+                        width: calc(100% - 95px);
+                        h3{
+                            font-size: 16px;
+                            line-height: 22px;
+                            margin-bottom: 15px;
+                        }
+                        p{
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .post-categories{
+            margin: 0 0 70px;
+            .title{
+                margin-bottom: 35px;
+            }
+            ul{
+                li{
+                    padding: 14px 0;
+                    display: block;
+                    position: relative;
+                    font-size: 16px;
+                    &:before{
+                        content: "";
+                        width: 35px;
+                        height: 1px;
+                        position: absolute;
+                        border-top: 1px dotted $text-dark;
+                        left: 0;
+                        bottom: 0;
+                    }
+                    &:last-child{
+                        &:before{
+                            display: none;
+                        }
+                    }
+                    a{
+                        color: $text-dark;
+                    }
+                }
+            }
+        }
+        .post-tags{
+            .title{
+                margin-bottom: 35px;
+            }
+            ul{
+                li{
+                    float: left;
+                    margin: 0 3px 3px 0;
+                    a{
+                        background-color: $bg-light;
+                        border-radius: 5px;
+                        color: $text-dark;
+                        display: block;
+                        font-size: 15px;
+                        line-height: 43px;
+                        padding: 0 26px;
+                        transition: all 0.5s;
+                        &:hover{
+                            text-decoration: none;
+                            background-color: $text-dark;
+                            color: $white-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
